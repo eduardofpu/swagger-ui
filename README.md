@@ -56,11 +56,8 @@ $ curl http://localhost:8080/api/user
     {
         "id": 5,
         "name": "Daniel"
-    },
-    {
-        "id": 6,
-        "name": "Jose"
     }
+    
 ]
 ```
 
