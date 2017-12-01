@@ -1,7 +1,7 @@
-# xy-inc
+# Swagger
 
 ```sh
-Exemplo de melhores praticas com Rest
+Exemplo de melhores  práticas com Rest
 
 api/user
 id
