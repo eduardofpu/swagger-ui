@@ -32,7 +32,7 @@ $ mvn spring-boot:run
 
 Realizar a chamada dos serviços. 
 
-GET /pois-interest - Lista todos os produtos de POIs 
+GET /user - Lista todos os Users
 
 ```sh
 $ curl http://localhost:8080/api/user
@@ -62,7 +62,7 @@ $ curl http://localhost:8080/api/user
 ```
 
 
-POST api/pois-interest/ - Cria um novo POIs 
+POST api/user/ - Cria um novo Usuario
 
 ```sh
 O Postman pode ser recomendado:
