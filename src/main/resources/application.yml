@@ -1,0 +1,19 @@
+security:
+  basic:
+    enabled: false
+
+spring:
+  datasource:
+    url: jdbc:h2:file:./target/h2db/user;INIT=runscript from 'classpath:schema-h2.sql'\;runscript from 'classpath:data-h2.sql'
+    name: xy-inc
+    username: root
+    password: 
+    initialize: true
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: true
+  h2: 
+    console:
+      enabled: true
