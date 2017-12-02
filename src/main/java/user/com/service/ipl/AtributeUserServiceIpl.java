@@ -36,4 +36,31 @@ public class AtributeUserServiceIpl implements AtributeUserService{
 		
 	}
 
+	@Override
+	public List<AtributeUser> findById(Long id) {
+		
+		return atributeUserRepository.findById(id);
+	}
+	
+	@Override
+	public void deleteAtributeUser(Long id) throws BusinessException {
+		if(id==null) {
+			
+			throw new BusinessException("Campo name não pode estar vazio");			
+		}
+		atributeUserRepository.deleteAtributeUser(id);
+		
+	}
+	
+	@Override
+	public void updateAtributeUser(AtributeUser atributeUser) throws BusinessException {
+		if(atributeUser==null) {
+			
+			throw new BusinessException("Campo name não pode estar vazio");			
+		}
+		atributeUserRepository.updateAtributeUser(atributeUser);
+		
+	}
+	
+
 }

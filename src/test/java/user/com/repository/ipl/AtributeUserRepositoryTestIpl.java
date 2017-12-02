@@ -42,6 +42,37 @@ public class AtributeUserRepositoryTestIpl extends AbstractTest{
 		LOGGER.info("Save novo name");
 
 	}
+	
+	@Test
+	public void testFindById() {
+		
+		List<AtributeUser> atributeUser = repository.findById(5l);
+		LOGGER.info("Id encontrado ");
+		atributeUser.forEach(res -> {
+			LOGGER.info(res.getId());
+			LOGGER.info(res.getName());
+			
+		});
+		
+		
+	}	
+	
+	@Test
+	public void deleteAtributeUser() {						
+		repository.deleteAtributeUser(5l);
+		LOGGER.info("Id Deletado");
+
+	}
+	
+	@Test
+	public void updateAtributeUser() {
+		AtributeUser atributeUser = new AtributeUser();
+		atributeUser.setId(4l);
+		atributeUser.setName("Sonja");		
+		repository.updateAtributeUser(atributeUser);
+		LOGGER.info("Editado novo name");
+
+	}
 
 
 }

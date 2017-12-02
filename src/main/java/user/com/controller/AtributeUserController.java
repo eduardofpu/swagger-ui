@@ -9,8 +9,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -44,4 +46,30 @@ public class AtributeUserController {
 		return new ResponseEntity<>(HttpStatus.CREATED);
 
 	}
+	@GetMapping("/buscarId")
+	@ResponseBody
+	public List<AtributeUser> findById(Long id) {
+		LOGGER.info("Pesquisando os Users pelo id");
+		return atributeUserService.findById(id);
+	}
+	
+	
+	@DeleteMapping("/deletarId")
+	public ResponseEntity deleteAtributeUser(Long id) throws BusinessException {
+		
+		LOGGER.info("Deletantdo pelo id");
+		atributeUserService.deleteAtributeUser(id);
+		return new ResponseEntity<>(HttpStatus.CREATED);
+
+	}
+	
+	@PutMapping
+	public ResponseEntity updateAtributeUser(@Valid @RequestBody AtributeUser atributeUser) throws BusinessException {
+		
+		LOGGER.info("Editando users na base de dados");
+		atributeUserService.updateAtributeUser(atributeUser);
+		return new ResponseEntity<>(HttpStatus.CREATED);
+
+	}
+	
 }

@@ -44,5 +44,45 @@ public class AtributeUserRepositoryIpl implements AtributeUserRepository{
 		namedParameterJdbcTemplate.update(insertQuery, parameter) ;
 		
 	}
+	
+	@Override
+	public List<AtributeUser> findById(Long id) {
+		
+		String query = "SELECT * FROM TB_USER WHERE ID = "+id;		
+		HashMap<String, Object> parameter = new HashMap<String, Object>();
+		
+		List<AtributeUser> atributeUser = namedParameterJdbcTemplate.query(query, parameter, (rs, rowNum) -> {
+			AtributeUser activy = new AtributeUser();
+			activy.setId(rs.getLong("id"));
+			activy.setName(rs.getString("name"));
+			return activy;
+		});
+		
+		
+		return atributeUser;
+	}
+	
+	@Override
+	public void deleteAtributeUser(Long id) {
+		
+		String deleteQuery = "DELETE FROM TB_USER WHERE ID = "+id;		
+		HashMap<String, Object> parameter = new HashMap<>();
+		
+		namedParameterJdbcTemplate.update(deleteQuery, parameter) ;
+		
+	}
+	
+	@Override
+	public void updateAtributeUser(AtributeUser atributeUser) {
+		
+		String updatetQuery = "UPDATE TB_USER  SET NAME =:name WHERE ID =:id";		
+		HashMap<String, Object> parameter = new HashMap<>();
+		parameter.put("id", atributeUser.getId());
+		parameter.put("name", atributeUser.getName());
+		
+		namedParameterJdbcTemplate.update(updatetQuery, parameter) ;
+		
+	}
+	
 
 }

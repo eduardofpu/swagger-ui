@@ -82,14 +82,101 @@ http://localhost:8080/api/user
 }
 
 ```
-## 4.Documentação
+
+GET /user - Buscar por id
+
+```sh
+$ curl http://localhost:8080/api/user/buscarId?id=5
+[
+    
+    {
+        "id": 5,
+        "name": "Daniel"
+    }
+    
+]
+```
+
+DELETE /user - Deletar por id
+
+```sh
+$ curl http://localhost:8080/api/user/deletarId?id=5
+
+depois use o comando abaixo para verificar o id=5 se foi deletado
+
+$ curl http://localhost:8080/api/user
+
+[
+    {
+        "id": 1,
+        "name": "Eduardo"
+    },
+    {
+        "id": 2,
+        "name": "Luciana"
+    },
+    {
+        "id": 3,
+        "name": "Gian"
+    },
+    {
+        "id": 4,
+        "name": "Marcos"
+    }
+    
+    
+]
+
+```
+
+## 4.Update
+```sh
+$ curl PUT  http://localhost:8080/api/user
+
+[
+    
+    {
+        "id": 4,
+        "name": "Marcos Daniel"
+    }
+    
+    
+]
+
+Depois acessar via get para confimar se o id =4 foi editado
+
+$ curl GET  http://localhost:8080/api/user
+
+[
+    {
+        "id": 1,
+        "name": "Eduardo"
+    },
+    {
+        "id": 2,
+        "name": "Luciana"
+    },
+    {
+        "id": 3,
+        "name": "Gian"
+    },
+    {
+        "id": 4,
+        "name": "Marcos Daniel"
+    }
+    
+    
+]
+
+```
+## 5.Documentação
 
 ```sh
 documentação dos serviços. URL http://localhost:8080/swagger-ui.html
 
 ```
 
-## 5.Banco h2
+## 6.Banco h2
 ```sh
 É possível acessar o banco embarcado pela a URL: http://localhost:8080/h2-console/
 
