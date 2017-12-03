@@ -8,6 +8,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest
-public class AbstractTest {
+public abstract class AbstractTest {
+	
 	protected Logger logger  = LoggerFactory.getLogger(this.getClass());
+	
 }

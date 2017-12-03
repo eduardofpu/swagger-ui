@@ -57,7 +57,7 @@ public class AtributeUserController {
 	@DeleteMapping("/deletarId")
 	public ResponseEntity deleteAtributeUser(Long id) throws BusinessException {
 		
-		LOGGER.info("Deletantdo pelo id");
+		LOGGER.info("Deletando pelo id");
 		atributeUserService.deleteAtributeUser(id);
 		return new ResponseEntity<>(HttpStatus.CREATED);
 

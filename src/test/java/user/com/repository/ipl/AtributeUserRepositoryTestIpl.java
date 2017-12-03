@@ -10,15 +10,16 @@ import org.springframework.transaction.annotation.Transactional;
 
 import user.com.AbstractTest;
 import user.com.atribute.AtributeUser;
-import user.com.repository.AtributeUserRepository;
+
 
 
 
 @Transactional
 public class AtributeUserRepositoryTestIpl extends AbstractTest{
 	private static final Logger LOGGER = Logger.getLogger(AtributeUserRepositoryTestIpl.class);
+	
 	@Autowired
-	private AtributeUserRepository repository;
+	private AtributeUserRepositoryIpl repository;
 	
 	@Test
 	public void testFindAll() {
@@ -29,8 +30,7 @@ public class AtributeUserRepositoryTestIpl extends AbstractTest{
 			LOGGER.info(res.getId());
 			LOGGER.info(res.getName());
 			LOGGER.info("----------------------");
-		});
-		
+		});	
 		
 	}
 	
@@ -40,7 +40,6 @@ public class AtributeUserRepositoryTestIpl extends AbstractTest{
 		atributeUser.setName("Arnold Schwarzenegger");		
 		repository.saveAtributeUser(atributeUser);
 		LOGGER.info("Save novo name");
-
 	}
 	
 	@Test
@@ -50,10 +49,8 @@ public class AtributeUserRepositoryTestIpl extends AbstractTest{
 		LOGGER.info("Id encontrado ");
 		atributeUser.forEach(res -> {
 			LOGGER.info(res.getId());
-			LOGGER.info(res.getName());
-			
-		});
-		
+			LOGGER.info(res.getName());			
+		});	
 		
 	}	
 	
@@ -61,7 +58,6 @@ public class AtributeUserRepositoryTestIpl extends AbstractTest{
 	public void deleteAtributeUser() {						
 		repository.deleteAtributeUser(5l);
 		LOGGER.info("Id Deletado");
-
 	}
 	
 	@Test

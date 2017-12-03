@@ -5,10 +5,8 @@
   <groupId>user.com</groupId>
   <artifactId>swagger-ui</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>jar</packaging>
+  <packaging>war</packaging>
 
-  <name>user</name>
-  <url>http://maven.apache.org</url>
 
   <properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
