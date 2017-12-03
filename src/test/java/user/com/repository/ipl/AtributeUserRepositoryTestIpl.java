@@ -11,9 +11,6 @@ import org.springframework.transaction.annotation.Transactional;
 import user.com.AbstractTest;
 import user.com.atribute.AtributeUser;
 
-
-
-
 @Transactional
 public class AtributeUserRepositoryTestIpl extends AbstractTest{
 	private static final Logger LOGGER = Logger.getLogger(AtributeUserRepositoryTestIpl.class);

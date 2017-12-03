@@ -9,7 +9,7 @@ import user.com.exception.BusinessException;
 public interface AtributeUserService {
 	List<AtributeUser> findAll();
 	void saveAtributeUser(AtributeUser atributeUser) throws BusinessException;
-	List<AtributeUser> findById(Long id);
+	List<AtributeUser> findById(Long id) throws BusinessException;
 	void deleteAtributeUser(Long id) throws BusinessException;
 	void updateAtributeUser(AtributeUser atributeUser) throws BusinessException;
 

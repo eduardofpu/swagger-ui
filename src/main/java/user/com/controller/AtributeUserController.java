@@ -48,7 +48,7 @@ public class AtributeUserController {
 	}
 	@GetMapping("/buscarId")
 	@ResponseBody
-	public List<AtributeUser> findById(Long id) {
+	public List<AtributeUser> findById(Long id) throws BusinessException {
 		LOGGER.info("Pesquisando os Users pelo id");
 		return atributeUserService.findById(id);
 	}
@@ -57,7 +57,7 @@ public class AtributeUserController {
 	@DeleteMapping("/deletarId")
 	public ResponseEntity deleteAtributeUser(Long id) throws BusinessException {
 		
-		LOGGER.info("Deletando pelo id");
+		LOGGER.info("Deletantdo pelo id");
 		atributeUserService.deleteAtributeUser(id);
 		return new ResponseEntity<>(HttpStatus.CREATED);
 

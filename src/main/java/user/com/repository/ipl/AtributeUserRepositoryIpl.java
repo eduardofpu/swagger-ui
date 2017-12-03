@@ -25,10 +25,10 @@ public class AtributeUserRepositoryIpl implements AtributeUserRepository{
 		HashMap<String, Object> parameter = new HashMap<String, Object>();
 		
 		List<AtributeUser> atributeUser = namedParameterJdbcTemplate.query(query, parameter, (rs, rowNum) -> {
-			AtributeUser activy = new AtributeUser();
-			activy.setId(rs.getLong("id"));
-			activy.setName(rs.getString("name"));
-			return activy;
+			AtributeUser activity = new AtributeUser();
+			activity.setId(rs.getLong("id"));
+			activity.setName(rs.getString("name"));
+			return activity;
 		});
 		
 		
@@ -52,10 +52,10 @@ public class AtributeUserRepositoryIpl implements AtributeUserRepository{
 		HashMap<String, Object> parameter = new HashMap<String, Object>();
 		
 		List<AtributeUser> atributeUser = namedParameterJdbcTemplate.query(query, parameter, (rs, rowNum) -> {
-			AtributeUser activity = new AtributeUser();
-			activity.setId(rs.getLong("id"));
-			activity.setName(rs.getString("name"));
-			return activity;
+			AtributeUser activy = new AtributeUser();
+			activy.setId(rs.getLong("id"));
+			activy.setName(rs.getString("name"));
+			return activy;
 		});
 		
 		
