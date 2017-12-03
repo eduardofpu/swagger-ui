@@ -38,6 +38,10 @@ public class AtributeUserServiceIpl implements AtributeUserService{
 
 	@Override
 	public List<AtributeUser> findById(Long id) {
+		if(id==null) {
+			
+			throw new BusinessException("Id não pode ser nullo");			
+		}
 		
 		return atributeUserRepository.findById(id);
 	}
