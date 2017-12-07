@@ -1,4 +1,4 @@
-package user.com.repository.ipl;
+package br.com.user.sw.repository.test;
 
 import java.util.List;
 
@@ -7,13 +7,14 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
-
-import user.com.AbstractTest;
-import user.com.atribute.AtributeUser;
+import br.com.user.sw.AbstractTest;
+import br.com.user.sw.atribute.AtributeUser;
+import br.com.user.sw.repository.ipl.AtributeUserRepositoryIpl;
 
 @Transactional
-public class AtributeUserRepositoryTestIpl extends AbstractTest{
-	private static final Logger LOGGER = Logger.getLogger(AtributeUserRepositoryTestIpl.class);
+public class AtributeUserRepositoryTest extends AbstractTest{
+	
+	private static final Logger LOGGER = Logger.getLogger(AtributeUserRepositoryTest.class);
 	
 	@Autowired
 	private AtributeUserRepositoryIpl repository;

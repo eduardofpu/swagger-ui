@@ -1,4 +1,4 @@
-package user.com.service.ipl;
+package br.com.user.sw.service.ipl;
 
 import java.util.List;
 
@@ -7,10 +7,10 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import user.com.atribute.AtributeUser;
-import user.com.exception.BusinessException;
-import user.com.repository.AtributeUserRepository;
-import user.com.service.AtributeUserService;
+import br.com.user.sw.atribute.AtributeUser;
+import br.com.user.sw.exception.BusinessException;
+import br.com.user.sw.repository.AtributeUserRepository;
+import br.com.user.sw.service.AtributeUserService;
 
 @Service
 @Transactional

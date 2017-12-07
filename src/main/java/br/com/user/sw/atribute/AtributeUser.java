@@ -1,4 +1,4 @@
-package user.com.atribute;
+package br.com.user.sw.atribute;
 
 import javax.validation.constraints.NotNull;
 
@@ -6,10 +6,10 @@ import org.hibernate.validator.constraints.NotBlank;
 
 public class AtributeUser {
 	
-	Long id;	
+	private Long id;	
 	@NotNull
 	@NotBlank
-	String name;
+	private String name;
 	
 	public Long getId() {
 		return id;

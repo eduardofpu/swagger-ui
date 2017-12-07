@@ -1,4 +1,4 @@
-package user.com.message;
+package br.com.user.sw.message;
 
 public class ErrorInfo {
 	

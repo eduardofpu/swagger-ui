@@ -1,4 +1,4 @@
-package user.com.controller;
+package br.com.user.sw.controller;
 
 import java.util.List;
 
@@ -18,9 +18,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import user.com.atribute.AtributeUser;
-import user.com.exception.BusinessException;
-import user.com.service.AtributeUserService;
+import br.com.user.sw.atribute.AtributeUser;
+import br.com.user.sw.exception.BusinessException;
+import br.com.user.sw.service.AtributeUserService;
 
 @RestController
 @RequestMapping(value = "api/user")

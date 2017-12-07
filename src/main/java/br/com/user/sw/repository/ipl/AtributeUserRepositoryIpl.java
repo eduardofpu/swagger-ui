@@ -1,4 +1,4 @@
-package user.com.repository.ipl;
+package br.com.user.sw.repository.ipl;
 
 import java.util.HashMap;
 import java.util.List;
@@ -8,8 +8,8 @@ import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import user.com.atribute.AtributeUser;
-import user.com.repository.AtributeUserRepository;
+import br.com.user.sw.atribute.AtributeUser;
+import br.com.user.sw.repository.AtributeUserRepository;
 @Service
 @Transactional
 public class AtributeUserRepositoryIpl implements AtributeUserRepository{

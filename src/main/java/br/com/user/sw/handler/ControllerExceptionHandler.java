@@ -1,4 +1,4 @@
-package user.com.handler;
+package br.com.user.sw.handler;
 
 
 import javax.servlet.http.HttpServletRequest;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-import user.com.message.ErrorInfo;
+import br.com.user.sw.message.ErrorInfo;
 
 @ControllerAdvice
 public class ControllerExceptionHandler extends ResponseEntityExceptionHandler{

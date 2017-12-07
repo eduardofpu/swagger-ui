@@ -1,10 +1,9 @@
-package user.com.service;
+package br.com.user.sw.service;
 
 import java.util.List;
 
-
-import user.com.atribute.AtributeUser;
-import user.com.exception.BusinessException;
+import br.com.user.sw.atribute.AtributeUser;
+import br.com.user.sw.exception.BusinessException;
 
 public interface AtributeUserService {
 	List<AtributeUser> findAll();

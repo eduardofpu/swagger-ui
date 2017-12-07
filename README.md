@@ -180,7 +180,7 @@ documentação dos serviços. URL http://localhost:8080/swagger-ui.html
 ```sh
 É possível acessar o banco embarcado pela a URL: http://localhost:8080/h2-console/
 
-* JDBC URL: jdbc:h2:file:./target/h2db/swagger-ui
+* JDBC URL: jdbc:h2:file:./target/h2db/xy-inc
 * Username: root
 * Password: 
 

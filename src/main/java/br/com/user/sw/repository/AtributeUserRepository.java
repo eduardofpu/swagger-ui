@@ -1,8 +1,8 @@
-package user.com.repository;
+package br.com.user.sw.repository;
 
 import java.util.List;
 
-import user.com.atribute.AtributeUser;
+import br.com.user.sw.atribute.AtributeUser;
 
 public interface AtributeUserRepository {
 	

@@ -1,4 +1,4 @@
-package user.com.exception;
+package br.com.user.sw.exception;
 
 public class BusinessException extends Exception{
 
